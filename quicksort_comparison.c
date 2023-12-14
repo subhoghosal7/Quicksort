@@ -81,7 +81,7 @@ double* foo(int n){
     double* count = calloc(2,sizeof(int));
     int* A = calloc(n,sizeof(int));
 
-    (int) (f[2]) (int,int,int) = {quicksort_random,quicksort_not_random};
+    int (*f[2]) (int*,int,int) = {quicksort_random,quicksort_not_random};
 
     for(int x = 1;x <= 1000;x++){
         for(int i = 0;i < n;i++){
@@ -113,7 +113,7 @@ int main(){
 
     for(int n = 100;n <= 1000;n += 10){
         double* count = foo(n);
-        printf("%d\t%f", n, count[0]/count[1]);
+        printf("%d\t%f\n", n, count[1]/count[0]);
         free(count);
     }
 
